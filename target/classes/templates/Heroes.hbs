@@ -1,0 +1,15 @@
+{{#partial "links"}}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+{{/partial}}
+{{#partial "content"}}
+    <a href="/squads"><i class="fas fa-arrow-left"></i></a>
+    <div class="text-center hero-btns">
+        <a href="/squads/{{squadHeroes.id}}/new"><button class="btn btn-outline-light">Add a Hero</button></a><br>
+        <!--        <span style="font-family:'Righteous';">Or</span><br>-->
+        <!--        <a href="/squads/{{squadHeroes.id}}/heroes"><button class="btn btn-outline-teal darken-4">View Squad's Heroes</button></a>-->
+    </div>
+{{/partial}}
+{{> layout.hbs}}

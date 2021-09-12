@@ -1,0 +1,52 @@
+{{#partial "links"}}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+{{/partial}}
+{{#partial "content"}}
+
+    <ul class="nav nav-tabs ">
+        <li role="presentation" class="active"><a href="#">Home</a></li>
+        <li role="presentation"><a href="#">See All Posts</a></li>
+        <li role="presentation"><a href="#">Add a New Post</a></li>
+    </ul>
+    <a href="/"><i class="fas fa-arrow-left"></i></a>
+    <div class="text-center">
+        <h2 class="hd-squads">Squads</h2>
+    </div>
+    {{#if userSquad}}
+        {{#each userSquad}}
+            <div class="row squads animated slideInLeft medium">
+                <div class="col-lg-6">
+                    <a href="/squads/{{id}}">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="{{url}}" class="card-img" alt="Squad Image">
+                                </div>
+                                <div class="col-md-8 card-back">
+                                    <div class="card-body">
+                                        <h2 class="card-title text-center">{{squadName}}</h2>
+                                        <p class="theme"><strong>Theme: </strong>{{theme}}</p>
+                                        <p class="theme"><strong>Max number of members: </strong>{{maxHeroes}}</p>
+
+                                        <hr>
+                                        <p><small><i class="far fa-clock"> Date Created: </i> {{formatDateTime}}</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/squads/{{id}}/delete" class="delete"><i class="far fa-trash-alt"> Delete Squad</i></a>
+                </div>
+            </div>
+        {{/each}}
+    {{else}}
+        <div class="text-center">
+            <strong class="none"><p>This page doesn't have any squads yet</p></strong>
+        </div>
+    {{/if}}
+{{/partial}}
+{{> layout.hbs}}

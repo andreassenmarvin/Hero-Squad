@@ -1,0 +1,53 @@
+{{#partial "links"}}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+{{/partial}}
+{{#partial "content"}}
+    <div class="animated rotateInUpLeft medium">
+        <form action="/squads/new" method="post">
+            <div class="modal-dialog cascading-modal" role="document">
+                <div class="modal-content">
+                    <div class="modal-header teal darken-4 white-text">
+                        <h4 class="title">
+                            <i class="fa fa-pencil-alt"></i> Squad Details</h4>
+                        <a href="/">
+                            <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="modal-body">
+                        <div class="md-form form-sm">
+                            <i class="fas fa-users"> Squad Name</i>
+                            <input type="text" name="squadName" class="form-control form-control-sm" placeholder="e.g. Avengers">
+                        </div>
+
+                        <!-- Material input email -->
+                        <div class="md-form form-sm">
+                            <i class="fas fa-bullseye"> Theme</i>
+                            <input type="text" name="theme" class="form-control form-control-sm" placeholder="e.g. Avengers assemble">
+                        </div>
+                        <div class="md-form form-sm">
+                            <i class="fab fa-studiovinari"> Squad hero capacity</i>
+                            <input type="number" name="max" class="form-control form-control-sm" placeholder="e.g. 20">
+                        </div>
+                        <div class="md-form form-sm">
+                            <i class="far fa-image"> Squad Image url</i>
+                            <input type="text" name="url" class="form-control form-control-sm" placeholder="e.g. https://cnet2.cbsistatic.png">
+                        </div>
+
+                        <div class="text-center mt-4 mb-2">
+                            <button class="btn btn-outline-teal darken-4" type="submit">Add
+                                <i class="fa fa-send ml-2"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+{{/partial}}
+{{> layout.hbs}}

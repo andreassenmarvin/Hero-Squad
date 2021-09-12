@@ -1,0 +1,29 @@
+{{#partial "links"}}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+{{/partial}}
+{{#partial "content"}}
+    <div class="text-center success">
+        <h2 class="hd-success">Success!!</h2><br>
+    {{#if userSquad}}
+            <p>Your squad is ready to go! <br> You can now add heroes to your squad</p><br>
+            <a href="/squads"><button class="btn btn-outline-teal dark-4">View Squads</button></a>
+    {{else}}
+        {{#if heroes}}
+                <p>Your hero is now ready for action and already running<br> Click him to view the squad</p>
+                <a href="/squads"><img src="/images/gif.webp" alt="Hero-success" class="img-fluid hero-run"></a>
+        {{else}}
+            {{#if full}}
+                    <p>{{full}}</p>
+                    <a href="/squads"><button class="btn btn-outline-teal dark-4">View Squads</button></a>
+            {{else}}
+                    <p>Your squad has been deleted</p>
+                    <a href="/"><button class="btn btn-outline-teal dark-4">Go Home</button></a>
+            {{/if}}
+        {{/if}}
+        </div>
+    {{/if}}
+{{/partial}}
+{{> layout.hbs}}

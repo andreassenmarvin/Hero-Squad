@@ -1,0 +1,49 @@
+{{#partial "content"}}
+    {{#if heroes}}
+        <div class="animated rotateInUpLeft medium">
+            <form action="/squads/{{heroes.id}}/new" method="post">
+                <div class="modal-dialog cascading-modal" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header teal darken-4 white-text">
+                            <h4 class="title">
+                                <i class="fa fa-pencil-alt"></i> Hero Details</h4>
+                            <a href="/squads/{{heroes.id}}">
+                                <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <div class="md-form form-sm">
+                                <i class="fas fa-mask"> Hero Name</i>
+                                <input type="text" name="hero" class="form-control form-control-sm" placeholder="e.g. Spider-man">
+                            </div>
+                            <div class="md-form form-sm">
+                                <i class="fas fa-bolt"> Super-Power</i>
+                                <input type="text" name="superPowers" class="form-control form-control-sm" placeholder="e.g. The human spider">
+                            </div>
+                            <div class="md-form form-sm">
+                                <i class="fas fa-star"> Role</i>
+                                <input type="text" name="role" class="form-control form-control-sm" placeholder="e.g. Intern">
+                            </div>
+                            <select id="inputState" class="form-control" name="squadId">
+                                {{#each squads}}
+                                    <option value="{{id}}">{{squadName}}</option>
+                                {{/each}}
+                            </select>
+                            <div class="text-center mt-4 mb-2">
+                                <button class="btn btn-outline-teal darken-4" type="submit">Add
+                                    <i class="fa fa-send ml-2"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    {{else}}
+        <p class="text-center" style="font-weight:bold;margin-top:20%;">Invalid request</p>
+    {{/if}}
+{{/partial}}
+{{> layout.hbs}}
