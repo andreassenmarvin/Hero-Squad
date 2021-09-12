@@ -5,15 +5,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mycompany.app</groupId>
-    <artifactId>hero-squad</artifactId>
+    <artifactId>my-app</artifactId>
     <version>1.0</version>
 
     <dependencies>
-        <!-- We need to list out ALL dependencies our project needs. If you have dependencies not listed here, but sure to add them -->
         <dependency>
             <groupId>com.sparkjava</groupId>
             <artifactId>spark-core</artifactId>
             <version>2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-template-handlebars</artifactId>
+            <version>2.5.5</version>
         </dependency>
         <dependency>
             <groupId>org.apache.velocity</groupId>
@@ -63,7 +67,6 @@
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
                     <archive>
-                        <!-- Change this to YOUR main class name if different. Usually, it will be App. -->
                         <manifest>
                             <mainClass>App</mainClass>
                         </manifest>
@@ -73,11 +76,10 @@
             <plugin>
                 <groupId>com.heroku.sdk</groupId>
                 <artifactId>heroku-maven-plugin</artifactId>
-                <version>0.4.4</version>
+                <version>3.0.3</version>
                 <configuration>
                     <jdkVersion>1.8</jdkVersion>
-                    <!-- Change this to YOUR application name! -->
-                    <appName>name-of-app</appName>
+                    <appName>andreassen-hero-squad</appName>
                     <processTypes>
                         <web>java -jar target/my-app-1.0-jar-with-dependencies.jar</web>
                     </processTypes>
