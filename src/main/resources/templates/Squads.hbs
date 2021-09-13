@@ -23,7 +23,6 @@
         {{#each userSquad}}
             <div class="row hero-squads card">
                 <div class="col-lg-6">
-                    <a href="/squads/{{id}}">
                         <div class="mb-3">
                             <div class="row hero-body">
                                 <div class="col-md-4">
@@ -33,15 +32,13 @@
                                     <div class="hero-stats">
                                         <p class="theme">Name:{{squadName}}</p>
                                         <p class="theme">Special powers:{{theme}}</p>
-                                        <p class="theme">Weaknesses:{{weaknesses}}</p>
+                                        <p class="theme">Weaknesses:{{theme}}</p>
                                         <p class="theme">Age:{{maxHeroes}}</p>
-                                        <hr>
                                         <p class="theme">Date Created:{{formatDateTime}}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </a>
                     <a href="/squads/{{id}}/delete" class="delete"><button class="btn-success delete-hero">Delete Squad</button></a>
                 </div>
             </div>

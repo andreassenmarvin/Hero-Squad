@@ -98,11 +98,11 @@ public class App {
         Map<String, Object> user = new HashMap<>();
         String squadName = request.queryParams("squadName");
         String theme = request.queryParams("theme");
-        String weaknesses = request.queryParams("weaknesses");
+        String weak = request.queryParams("weak");
         String url = request.queryParams("url");
         int numberOf = parseInt(request.queryParams("max"));
         Squads userSquad;
-        userSquad = new Squads(squadName, theme, weaknesses, url, numberOf);
+        userSquad = new Squads(squadName, theme, weak, url, numberOf);
         user.put("userSquad", Squads.getAllSquads());
         return new ModelAndView(user, "Hero-success.hbs");
     }
