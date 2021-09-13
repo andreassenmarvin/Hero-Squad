@@ -7,8 +7,8 @@ This is a web-app that allows the user to create a hero and assign his/her stats
 ```
    $ git clone https://github.com/andreassenmarvin/Hero-Squad.git
 ```
-* Open your project on your favorite editor
-* Open project on Live Server
+* Open your project on IntelliJ.
+* Run the project.
 
 ## Known Bugs
 #### No known bugs
