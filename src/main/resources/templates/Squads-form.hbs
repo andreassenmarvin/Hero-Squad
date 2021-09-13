@@ -1,41 +1,39 @@
+{{#partial "links"}}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+{{/partial}}
 {{#partial "content"}}
-  <div class="body-overlay"></div>
-  <img src="https://www.cnet.com/a/img/hkUYHalOA9_225I8mTRq9ejohQs=/1200x630/2017/10/12/164d6d22-0db8-4603-a672-cb8c07e447b8/netpicks-the-flash.jpg" class="img-fluid bg-image">
-  <nav class="navbar navbar-expand-lg bg-light" id="navbar">
-              <a href="/" class="navbar-brand"><img src="https://www.pngitem.com/pimgs/m/408-4083826_flash-logo-png-transparent-png.png"  id="nav-logo"></a>
-              <h1 id="nav-title">HERO SQUAD</h1>
-               <ul class="navbar-nav">
-                   <li class="nav-item active">
-                     <a class="nav-link" href="/">Home</a>
-                   </li>
-                   <li class="nav-item">
-                     <a class="nav-link" href="#">Add Squad</a>
-                   </li>
-                   <li class="nav-item">
-                     <a class="nav-link" href="#">All Squads</a>
-                     </li>
-                </ul>
-          </nav>
+    <div class="animated rotateInUpLeft medium">
         <form action="/squads/new" method="post">
-            <div class="modal-dialog create-modal">
+            <div class="modal-dialog cascading-modal" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="m-auto">Hero Details</h4>
+                    <div class="modal-header teal darken-4 white-text">
+                        <h4 class="title">
+                            <i class="fa fa-pencil-alt"></i> Squad Details</h4>
                         <a href="/">
-                            <button type="button" class="modal-close-btn" data-dismiss="modal" aria-label="Close">
-                                <i class="bi bi-x"></i>
+                            <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
                             </button>
                         </a>
                     </div>
                     <div class="modal-body">
                         <div class="md-form form-sm">
+<<<<<<< HEAD
                             <label for="Name" class="create-labels">
                                  Name*
                             </label>
                             <input type="text" name="squadName" class="form-control form-control-sm" placeholder="Enter your hero's name" required>
+=======
+                            <i class="fas fa-users"> Squad Name</i>
+                            <input type="text" name="squadName" class="form-control form-control-sm" placeholder="e.g. Avengers">
+>>>>>>> parent of 507955e... Create form for creating heroes
                         </div>
 
+                        <!-- Material input email -->
                         <div class="md-form form-sm">
+<<<<<<< HEAD
                              <label for="Age" class="create-labels">
                                  Age*
                              </label>
@@ -53,16 +51,28 @@
                                </label>
                             <input type="text" name="weaknesses" class="form-control form-control-sm" placeholder="Enter your hero's weaknesses" required>
                           </div>
+=======
+                            <i class="fas fa-bullseye"> Theme</i>
+                            <input type="text" name="theme" class="form-control form-control-sm" placeholder="e.g. Avengers assemble">
+                        </div>
                         <div class="md-form form-sm">
-                             <label for="Image url" class="create-labels">
-                                 Image url*
-                              </label>
-                            <input type="text" name="url" class="form-control form-control-sm" placeholder="Enter your hero's image url">
+                            <i class="fab fa-studiovinari"> Squad hero capacity</i>
+                            <input type="number" name="max" class="form-control form-control-sm" placeholder="e.g. 20">
+                        </div>
+>>>>>>> parent of 507955e... Create form for creating heroes
+                        <div class="md-form form-sm">
+                            <i class="far fa-image"> Squad Image url</i>
+                            <input type="text" name="url" class="form-control form-control-sm" placeholder="e.g. https://cnet2.cbsistatic.png">
                         </div>
 
                         <div class="text-center mt-4 mb-2">
+<<<<<<< HEAD
                             <button type="submit" class="btn btn-muted create-submit-btn">
                                  Create
+=======
+                            <button class="btn btn-outline-teal darken-4" type="submit">Add
+                                <i class="fa fa-send ml-2"></i>
+>>>>>>> parent of 507955e... Create form for creating heroes
                             </button>
                         </div>
 
