@@ -15,7 +15,6 @@ This is a web-app that allows the user to create a hero and assign his/her stats
 ## Technologies Used
 * Java
 * Handlebars
-* HTML
 * CSS
 * Bootstrap
 ## Support and contact details
