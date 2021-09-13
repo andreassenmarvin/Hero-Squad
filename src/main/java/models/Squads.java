@@ -19,7 +19,7 @@ public class Squads {
     private static ArrayList<Squads> allSquads = new ArrayList<>();
     private ArrayList<Heroes> heroesInSquad;
 
-    public Squads(String name, String theme, String url, int max){
+    public Squads(String squadName, String name, String theme, String url, int max){
         this.squadName = name;
         this.theme = theme;
         this.url = url;

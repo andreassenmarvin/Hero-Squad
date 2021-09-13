@@ -1,0 +1,23 @@
+{{#partial "content"}}
+    <div class="text-center success">
+        <h2 class="hd-success">Hurray!</h2><br>
+    {{#if userSquad}}
+            <p>Your hero has been created succesfully! <br> You can now add heroes to your squad</p><br>
+            <a href="/squads"><button class="btn btn-outline-teal dark-4">View Heros</button></a>
+    {{else}}
+        {{#if heroes}}
+                <p>Your hero is now ready for action and already running<br> Click him to view the squad</p>
+                <a href="/squads"><img src="/images/gif.webp" alt="Hero-success" class="img-fluid hero-run"></a>
+        {{else}}
+            {{#if full}}
+                    <p>{{full}}</p>
+                    <a href="/squads"><button class="btn btn-success create-btn">View your heroes</button></a>
+            {{else}}
+                    <p>Your squad has been deleted</p>
+                    <a href="/"><button class="btn btn-success create-btn">Go Home</button></a>
+            {{/if}}
+        {{/if}}
+        </div>
+    {{/if}}
+{{/partial}}
+{{> layout.hbs}}

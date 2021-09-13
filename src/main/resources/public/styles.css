@@ -75,10 +75,6 @@ navbar-nav li a {
 }
 
 .create-btn {
-    z-index: 3;
-}
-
-#create-btn {
     position: relative;
     display: block;
     margin: auto;
