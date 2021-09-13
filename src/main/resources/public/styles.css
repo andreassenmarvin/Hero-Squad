@@ -6,6 +6,7 @@ body {
    position: fixed;
    width: 100%;
    height: 100%;
+   top: 0;
    opacity: 0.8;
    filter:blur(1px);
    z-index: -999;
@@ -15,16 +16,18 @@ body {
    position: fixed;
    width: 100%;
    height: 100%;
+   top: 0;
    background-color: rgba(44, 43, 43, 0.6);
    z-index: 2;
 }
 
 #navbar {
-   position: relative;
+   position: fixed;
    display: flex;
    align-items: center;
    width: 100%;
    height: 65px;
+   top: 0;
    z-index: 4
 }
 
@@ -165,7 +168,7 @@ hero-created-btn {
 .squads-title {
     position: relative;
     z-index: 3;
-    color: black;
+    color: #28a745;
     margin-top: 20px;
 }
 

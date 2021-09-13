@@ -1,13 +1,13 @@
 import static java.lang.Integer.parseInt;
 
-import models.Heroes;
 import models.Squads;
 import spark.ModelAndView;
 import spark.Request;
 import spark.Response;
 import spark.template.handlebars.HandlebarsTemplateEngine;
-import java.util.Map;
+
 import java.util.HashMap;
+import java.util.Map;
 
 import static spark.Spark.*;
 
@@ -41,30 +41,6 @@ public class App {
             return new ModelAndView(user, "Squads.hbs");
         }, new HandlebarsTemplateEngine());
 
-        get("/squads/:id", (request, response) -> {
-            Map<String, Object> user = new HashMap<>();
-            int theId = parseInt(request.params("id"));
-            Squads pageId = Squads.squadWithId(theId);
-            user.put("squadHeroes", pageId);
-            return new ModelAndView(user, "Heroes.hbs");
-        }, new HandlebarsTemplateEngine());
-
-        get("/squads/:id/new", (request, response) -> {
-            Map<String, Object> user = new HashMap<>();
-            int theId = parseInt(request.params("id"));
-            Squads heroes = Squads.squadWithId(theId);
-            user.put("heroes", heroes);
-            user.put("squads", Squads.getAllSquads());
-            return new ModelAndView(user, "Heros-form.hbs");
-        }, new HandlebarsTemplateEngine());
-
-        get("/squads/:id/heroes", (request, response) -> {
-            Map<String, Object> user  = new HashMap<>();
-            int theId = parseInt(request.params("id"));
-            Squads squad = Squads.squadWithId(theId);
-            user.put("allHeroes", squad.getHeroesInSquad());
-            return new ModelAndView(user, "Heros-list.hbs");
-        }, new HandlebarsTemplateEngine());
 
         post("/squads/:id/new", (request, response) -> {
             Map<String, Object> user = new HashMap<>();

@@ -10,6 +10,7 @@ import java.util.Map;
 public class Squads {
     private String squadName;
     private String theme;
+    private String weak;
     private String url;
     private int maxHeroes;
     private int id;
@@ -19,9 +20,10 @@ public class Squads {
     private static ArrayList<Squads> allSquads = new ArrayList<>();
     private ArrayList<Heroes> heroesInSquad;
 
-    public Squads(String squadName, String name, String theme, String url, int max){
+    public Squads(String squadName, String name, String theme, String weak, String url, int max){
         this.squadName = name;
         this.theme = theme;
+        this.weak = weak;
         this.url = url;
         this.maxHeroes = max;
         this.formatDateTime = createdAt.format(formatter);
@@ -37,6 +39,8 @@ public class Squads {
     public String getTheme() {
         return theme;
     }
+
+    public String getWeak() { return weak; }
 
     public int getMaxHeroes() {
         return maxHeroes;
