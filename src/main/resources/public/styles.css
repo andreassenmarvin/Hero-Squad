@@ -185,7 +185,7 @@ hero-created-btn {
 .hero-squads {
     position: relative;
     z-index: 3;
-    width: 600px;
+    width: 650px;
     height: auto;
     padding: 20px;
     margin:40px 0 0 40px;
@@ -193,12 +193,18 @@ hero-created-btn {
 
 .hero-img {
     position: relative;
-    width: 150px;
-    height: auto;
+    width: 300px;
+    height: 400px;
+}
+
+.theme {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
 }
 
 .hero-stats {
-    width: 50%;
+    width: 400px;
     margin-left: 300px;
 }
 
