@@ -22,4 +22,4 @@ This is a web-app that allows the user to create a hero and assign his/her stats
 Incase of any contributions,query or issues,you can reach me through the email below:
 **machariamarvin625@gmail.com**
 ### License 
-This project is licensed under the [MIT License](https://github.com/marvinandreassen/Hero-Squad/blob/master/LICENSE)
+This project is licensed under the [MIT License](https://github.com/andreassenmarvin/Hero-Squad/blob/master/LICENSE)
