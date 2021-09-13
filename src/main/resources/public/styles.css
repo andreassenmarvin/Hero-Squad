@@ -135,3 +135,29 @@ navbar-nav li a {
 .create-submit-btn:focus {
     outline: none;
 }
+
+hero-created-btn {
+    position: relative;
+    display: block;
+    margin: auto;
+    color: white;
+    outline: none;
+    z-index: 3;
+    width: 120px;
+    height: 50px;
+    font-size: 15px;
+}
+
+.hero-create-success {
+    position: relative;
+    display: block;
+    margin: auto;
+    background-color: rgba(44, 43, 43, 0.6);
+    border-radius: 4px;
+    color: white;
+    z-index: 3;
+    width: 350px;
+    height: auto;
+    padding: 20px;
+    margin-top: 150px;
+}

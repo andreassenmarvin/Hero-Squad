@@ -22,13 +22,12 @@ public class App {
     public static void main(String[] args) {
         port(getHerokuAssignedPort());
         staticFileLocation("/public");
-        //Get: View the Home page
+
         get("/", (request, response) -> {
             Map<String, Object> user = new HashMap<>();
             return new ModelAndView(user, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
-        //Get: Add squad form
         get("/squads/new", (request, response) -> {
             Map<String, Object> user = new HashMap<>();
             return new ModelAndView(user, "Squads-form.hbs");
@@ -37,14 +36,12 @@ public class App {
         //Post: Submit data from the add squad form
         post("/squads/new", App::handle, new HandlebarsTemplateEngine());
 
-        //Get: View all squads
         get("/squads", (request, response) -> {
             Map<String, Object> user = new HashMap<>();
             user.put("userSquad", Squads.getAllSquads());
             return new ModelAndView(user, "Squads.hbs");
         }, new HandlebarsTemplateEngine());
 
-        //Get: View squad-details e.g heroes
         get("/squads/:id", (request, response) -> {
             Map<String, Object> user = new HashMap<>();
             int theId = parseInt(request.params("id"));
@@ -53,7 +50,6 @@ public class App {
             return new ModelAndView(user, "Heroes.hbs");
         }, new HandlebarsTemplateEngine());
 
-        //Get: Add hero form
         get("/squads/:id/new", (request, response) -> {
             Map<String, Object> user = new HashMap<>();
             int theId = parseInt(request.params("id"));
@@ -63,7 +59,6 @@ public class App {
             return new ModelAndView(user, "Heros-form.hbs");
         }, new HandlebarsTemplateEngine());
 
-        //Get: View the added heroes
         get("/squads/:id/heroes", (request, response) -> {
             Map<String, Object> user  = new HashMap<>();
             int theId = parseInt(request.params("id"));
@@ -72,7 +67,6 @@ public class App {
             return new ModelAndView(user, "Heros-list.hbs");
         }, new HandlebarsTemplateEngine());
 
-        //Post: Submit add hero form
         post("/squads/:id/new", (request, response) -> {
             Map<String, Object> user = new HashMap<>();
             int theId = parseInt(request.params("id"));
@@ -92,7 +86,6 @@ public class App {
             return new ModelAndView(user, "success.hbs");
         }, new HandlebarsTemplateEngine());
 
-        //Get: Delete a squad
         get("/squads/:id/delete", (req, res) -> {
             Map<String, Object> user = new HashMap<>();
             int theId = parseInt(req.params("id"));
@@ -112,6 +105,6 @@ public class App {
         Squads userSquad;
         userSquad = new Squads(squadName, theme, weaknesses, url, numberOf);
         user.put("userSquad", Squads.getAllSquads());
-        return new ModelAndView(user, "success.hbs");
+        return new ModelAndView(user, "Hero-success.hbs");
     }
 }
