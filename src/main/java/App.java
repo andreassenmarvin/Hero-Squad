@@ -33,7 +33,6 @@ public class App {
             return new ModelAndView(user, "Squads-form.hbs");
         }, new HandlebarsTemplateEngine());
 
-        //Post: Submit data from the add squad form
         post("/squads/new", App::handle, new HandlebarsTemplateEngine());
 
         get("/squads", (request, response) -> {

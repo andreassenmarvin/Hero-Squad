@@ -17,14 +17,14 @@
                  </ul>
            </nav>
     <div class="text-center">
-        <h2 class="hd-squads">Squads</h2>
+        <h2 class="squads-title">Squads</h2>
     </div>
     {{#if userSquad}}
         {{#each userSquad}}
-            <div class="row squads animated slideInLeft medium">
+            <div class="row hero-squads card">
                 <div class="col-lg-6">
                     <a href="/squads/{{id}}">
-                        <div class="card mb-3" style="max-width: 540px;">
+                        <div class="card mb-3">
                             <div class="row no-gutters">
                                 <div class="col-md-4">
                                     <img src="{{url}}" class="card-img" alt="Squad Image">
@@ -43,12 +43,12 @@
                             </div>
                         </div>
                     </a>
-                    <a href="/squads/{{id}}/delete" class="delete"><i class="far fa-trash-alt"> Delete Squad</i></a>
+                    <a href="/squads/{{id}}/delete" class="delete"><button class="btn-success" style="outline:none;border:none;cursor:pointer">Delete Squad</button></a>
                 </div>
             </div>
         {{/each}}
     {{else}}
-        <div class="text-center">
+        <div class="text-center no-heroes">
             <strong class="none"><p>This page doesn't have any squads yet</p></strong>
         </div>
     {{/if}}

@@ -161,3 +161,32 @@ hero-created-btn {
     padding: 20px;
     margin-top: 150px;
 }
+
+.squads-title {
+    position: relative;
+    z-index: 3;
+    color: black;
+    margin-top: 20px;
+}
+
+.no-heroes {
+    position: relative;
+    display: block;
+    margin: auto;
+    background-color: rgba(44, 43, 43, 0.6);
+    border-radius: 4px;
+    color: white;
+    z-index: 3;
+    width: 350px;
+    height: auto;
+    padding: 20px;
+}
+
+.hero-squads {
+    position: relative;
+    z-index: 3;
+    width: 800px;
+    height: auto;
+    padding: 20px;
+    margin:40px 0 0 40px;
+}
