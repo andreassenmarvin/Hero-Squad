@@ -30,8 +30,10 @@
                     <p>{{full}}</p>
                     <a href="/squads"><button class="btn btn-outline-teal dark-4">View Squads</button></a>
             {{else}}
-                    <p class="hd-success">Your squad has been deleted</p>
-                    <a href="/"><button class="btn btn-success hero-created-btn">Go Home</button></a>
+                    <div class="text-center card hero-create-success">
+                             <p class="hd-success">Your squad has been deleted!</p>
+                             <a href="/"><button class="btn btn-success hero-created-btn">Go Home</button></a>
+                     </div>
             {{/if}}
         {{/if}}
         </div>
