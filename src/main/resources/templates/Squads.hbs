@@ -16,7 +16,7 @@
                       </li>
                  </ul>
            </nav>
-    <div class="text-center">
+    <div class="text-center" style="position: relative; z-index: 3">
         <h2 class="squads-title">Squads</h2>
     </div>
     {{#if userSquad}}
@@ -24,26 +24,26 @@
             <div class="row hero-squads card">
                 <div class="col-lg-6">
                     <a href="/squads/{{id}}">
-                        <div class="card mb-3">
-                            <div class="row no-gutters">
+                        <div class="mb-3">
+                            <div class="row hero-body">
                                 <div class="col-md-4">
-                                    <img src="{{url}}" class="card-img" alt="Squad Image">
+                                    <img src="{{url}}" class="hero-img" alt="Hero Image">
                                 </div>
-                                <div class="col-md-8 card-back">
-                                    <div class="card-body">
-                                        <h2 class="card-title text-center">{{squadName}}</h2>
+                                <div class="col-md-8">
+                                    <div class="hero-stats">
+                                        <h2 class="text-center">{{squadName}}</h2>
                                         <p class="theme"><strong>Special powers: </strong>{{theme}}</p>
                                         <p class="theme"><strong>Weaknesses: </strong>{{weaknesses}}</p>
                                         <p class="theme"><strong>Age: </strong>{{maxHeroes}}</p>
                                         <hr>
-                                        <p><small><i class="far fa-clock"> Date Created: </i> {{formatDateTime}}</small>
+                                        <p><small>Date Created:{{formatDateTime}}</small>
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </a>
-                    <a href="/squads/{{id}}/delete" class="delete"><button class="btn-success" style="outline:none;border:none;cursor:pointer">Delete Squad</button></a>
+                    <a href="/squads/{{id}}/delete" class="delete"><button class="btn-success delete-hero">Delete Squad</button></a>
                 </div>
             </div>
         {{/each}}

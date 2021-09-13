@@ -185,8 +185,29 @@ hero-created-btn {
 .hero-squads {
     position: relative;
     z-index: 3;
-    width: 800px;
+    width: 600px;
     height: auto;
     padding: 20px;
     margin:40px 0 0 40px;
+}
+
+.hero-img {
+    position: relative;
+    width: 150px;
+    height: auto;
+}
+
+.hero-stats {
+    width: 50%;
+    margin-left: 300px;
+}
+
+.delete-hero {
+    outline:none;
+    border:none;
+    cursor:pointer;
+    width: 100px;
+    height: 40px;
+    margin-left: 200px;
+    font-size: 12px;
 }
