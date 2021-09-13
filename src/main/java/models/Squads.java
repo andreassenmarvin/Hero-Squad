@@ -30,6 +30,9 @@ public class Squads {
         heroesInSquad = new ArrayList<>();
     }
 
+    public Squads(String menace, String to_destroy_and_conquer, String s, int i) {
+    }
+
     public String getSquadName() {
         return squadName;
     }
