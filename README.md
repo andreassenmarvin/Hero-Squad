@@ -1,4 +1,4 @@
-# QUOTES-APP
+# Hero-Squad
 This is a web-app that allows the user to create a hero and assign his/her stats.The user can add more heroes and assign them to a certain squad.
 
 #### By **Marvin Macharia**
