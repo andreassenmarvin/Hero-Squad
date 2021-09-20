@@ -38,12 +38,4 @@ public class Heroes {
         allHeroes.clear();
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Heroes kitten = (Heroes) o;
-
-        return name.equals(kitten.name); //more properties would be taken into account here for a more complex model
-    }
 }
