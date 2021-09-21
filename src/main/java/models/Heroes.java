@@ -6,28 +6,28 @@ import java.util.List;
 import java.util.Map;
 
 public class Heroes {
-    private String name;
-    private String superPower;
-    private String role;
+    private String squadName;
+    private int maxSize;
+    private String motive;
     private static List<Heroes> allHeroes = new ArrayList<>();
 
-    public Heroes(String name, String power, String role){
-        this.name = name;
-        this.superPower = power;
-        this.role = role;
+    public Heroes(String squadName, int maxSize, String motive){
+        this.squadName = squadName;
+        this.maxSize = maxSize;
+        this.motive = motive;
         allHeroes.add(this);
     }
 
     public String getName() {
-        return name;
+        return squadName;
     }
 
-    public String getSuperPower() {
-        return superPower;
+    public int getSuperPower() {
+        return maxSize;
     }
 
     public String getRole() {
-        return role;
+        return motive;
     }
 
     public static List<Heroes> getAllHeroes() {
